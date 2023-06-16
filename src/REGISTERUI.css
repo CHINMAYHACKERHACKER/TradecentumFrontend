@@ -1,0 +1,82 @@
+/* CSS for Responsive Design */
+
+.DASH {
+    padding: 15%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+@media (max-width: 992px) {
+
+    /* Adjust card layout for smaller screens */
+    .col-md-7 {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    /* Adjust form layout for smaller screens */
+    .card-body {
+        padding: 10px;
+    }
+
+    /* Adjust form inputs for smaller screens */
+    .form-group {
+        margin-bottom: 10px;
+    }
+
+    /* Adjust button layout for smaller screens */
+    .btn-primary {
+        width: 100%;
+    }
+
+    /* Adjust link layout for smaller screens */
+    .card-header-tabs .nav-link {
+        display: block;
+        padding: 5px 0;
+        text-align: center;
+    }
+}
+
+@media (max-width: 576px) {
+
+    /* Adjust font size for smaller screens */
+    .form-group label,
+    .form-text,
+    .btn-primary,
+    .card-header-tabs .nav-link {
+        font-size: 14px;
+    }
+
+    /* Adjust margin for forgot password link */
+    .card-header-tabs .nav-link:last-child {
+        margin-left: 0;
+    }
+}
+
+@media (max-width: 400px) {
+
+    /* Adjust font size for smaller screens */
+    .form-group label,
+    .form-text,
+    .btn-primary,
+    .card-header-tabs .nav-link {
+        font-size: 12px;
+    }
+
+    /* Adjust margin for forgot password link */
+    .card-header-tabs .nav-link:last-child {
+        margin-left: 0;
+    }
+}
+
+/* CSS for Responsive PhoneInput */
+.PhoneInput {
+    width: 100%;
+}
+
+@media (max-width: 576px) {
+    .PhoneInput input {
+        font-size: 14px;
+    }
+}

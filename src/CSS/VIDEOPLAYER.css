@@ -1,0 +1,11 @@
+.VIDEO-container {
+    position: relative;
+    width: 119%;
+    margin-left: 3%;
+    perspective: 1000px;
+}
+
+.VIDEO-container video {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+    transform: translateZ(-20px);
+}
