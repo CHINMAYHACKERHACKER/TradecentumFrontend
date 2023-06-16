@@ -19,16 +19,18 @@ const TRADEUI = () => {
         setUSERPAYEDUNIQUEID(localStorage.getItem("USERPAYINGUNIQUEID"));
     }, []);
 
-    useEffect(() => {
-        if (USERPAYEDDATA.length > 0) {
-            const userPayedData = USERPAYEDDATA.find(
-                (value) => value.USERUNIQUEID === USERPAYEDUNIQUEID && value.USEREMAILEMAIL === value.EMAIL
-            );
-            if (userPayedData) {
-                NAVIGATE("/register");
-            }
-        }
-    }, [USERPAYEDDATA, USERPAYEDUNIQUEID, NAVIGATE]);
+   useEffect(() => {
+  if (Array.isArray(USERPAYEDDATA) && USERPAYEDDATA.length > 0) {
+    const userPayedData = USERPAYEDDATA.find(
+      (value) =>
+        value.USERUNIQUEID === USERPAYEDUNIQUEID && value.USEREMAILEMAIL === value.EMAIL
+    );
+    if (userPayedData) {
+      NAVIGATE("/register");
+    }
+  }
+}, [USERPAYEDDATA, USERPAYEDUNIQUEID, NAVIGATE]);
+
 
     return (
         <div className="homepage">
