@@ -19,7 +19,7 @@ const REGISTEREMAIL = () => {
             USERGENERATEDUNIQUEID: USERGENERATEDUNIQUEID,
         });
         localStorage.setItem("USERPAYINGUNIQUEID", USERGENERATEDUNIQUEID);
-        window.location=`${process.env.PAYMENT}`
+        window.location.href=`${process.env.PAYMENT}`
     }
 
     useEffect(() => {
