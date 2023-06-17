@@ -19,7 +19,7 @@ const REGISTEREMAIL = () => {
             USERGENERATEDUNIQUEID: USERGENERATEDUNIQUEID,
         });
         localStorage.setItem("USERPAYINGUNIQUEID", USERGENERATEDUNIQUEID);
-        window.location.href=`${process.env.PAYMENT}`
+        window.location.href=`https://buy.stripe.com/test_aEU5kzaYm4t73ni7ss`
     }
 
     useEffect(() => {
