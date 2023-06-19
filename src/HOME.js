@@ -18,7 +18,7 @@ const HOME = () => {
     };
 
     const logoutFunction = () => {
-        navigate("/register");
+        navigate("/login");
     };
 
     useEffect(() => {
@@ -110,6 +110,6 @@ const HOME = () => {
             </footer>
         </div>
     );
-};
+}
 
 export default HOME;

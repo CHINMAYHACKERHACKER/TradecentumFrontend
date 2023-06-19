@@ -17,6 +17,8 @@ import CROSSRATE from "./CROSSRATE.js";
 import VIDEOSTATICVIDEO from "./VIDEOSTATICVIDEO.js";
 import VIDEO from "./VIDEO.js";
 import TRADE from "./TRADE.js";
+import USERCARD from "./USERCARD.js";
+import LOGIN from "./LOGIN.js";
 
 const APP = () => {
     return <>
@@ -39,6 +41,8 @@ const APP = () => {
                 <Route path="/videostaticvideo" element={<VIDEOSTATICVIDEO />} />
                 <Route path="/video/VIDEO/:VIDEOONE/VIDEO/:VIDEOTWO/VIDEO/:VIDEOTHREE/VIDEO/:VIDEOFIVE/:TITLE/:ID" element={<VIDEO />} />
                 <Route path="/trade" element={<TRADE />} />
+                <Route path="/User" element={<USERCARD />} />
+                <Route path="/login" element={<LOGIN />} />
             </Routes>
         </BrowserRouter>
     </>

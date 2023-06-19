@@ -9,28 +9,33 @@ const TRADEUI = () => {
     const NAVIGATE = useNavigate();
 
     const REGISTERFUNCTION = () => {
-        NAVIGATE("/Email");
+        NAVIGATE("/register");
     };
 
     useEffect(() => {
-        axios.get(`${process.env.REACT_APP_BACKEND_URL}/CHARGES`).then((res) => {
-            setUSERPAYEDDATA(res.data);
-        });
+        axios
+            .get(`${process.env.REACT_APP_BACKEND_URL}/CHARGES`)
+            .then((res) => {
+                setUSERPAYEDDATA(res.data);
+            });
         setUSERPAYEDUNIQUEID(localStorage.getItem("USERPAYINGUNIQUEID"));
     }, []);
 
-   useEffect(() => {
-  if (Array.isArray(USERPAYEDDATA) && USERPAYEDDATA.length > 0) {
-    const userPayedData = USERPAYEDDATA.find(
-      (value) =>
-        value.USERUNIQUEID === USERPAYEDUNIQUEID && value.USEREMAILEMAIL === value.EMAIL
-    );
-    if (userPayedData) {
-      NAVIGATE("/register");
-    }
-  }
-}, [USERPAYEDDATA, USERPAYEDUNIQUEID, NAVIGATE]);
-
+    useEffect(() => {
+        if (
+            Array.isArray(USERPAYEDDATA) &&
+            USERPAYEDDATA.length > 0
+        ) {
+            const userPayedData = USERPAYEDDATA.find(
+                (value) =>
+                    value.USERUNIQUEID === USERPAYEDUNIQUEID &&
+                    value.USEREMAILEMAIL === value.EMAIL
+            );
+            if (userPayedData) {
+                NAVIGATE("/home");
+            }
+        }
+    }, [USERPAYEDDATA, USERPAYEDUNIQUEID, NAVIGATE]);
 
     return (
         <div className="homepage">
@@ -41,12 +46,10 @@ const TRADEUI = () => {
                     <button
                         type="button"
                         className="bt"
-                        style={{ marginLeft: "37%" }}
                         onClick={REGISTERFUNCTION}
                     >
                         Register
                     </button>
-                    <div className="button-gap" />
                     <button className="bt">Learn More</button>
                 </div>
             </header>
@@ -60,22 +63,27 @@ const TRADEUI = () => {
                 <div className="feature">
                     <i className="fas fa-calendar-alt"></i>
                     <h3>Market Analysis</h3>
-                    <p>Stay updated with market trends and make informed trading decisions.</p>
+                    <p>
+                        Stay updated with market trends and make informed trading decisions.
+                    </p>
                 </div>
                 <div className="feature">
                     <i className="fas fa-globe"></i>
                     <h3>Global Market</h3>
-                    <p>Trade in the forex market which operates 24/5 across different time zones.</p>
+                    <p>
+                        Trade in the forex market which operates 24/5 across different time
+                        zones.
+                    </p>
                 </div>
             </section>
 
             <section className="cta-section">
                 <h2>Ready to start trading?</h2>
-                <button className="btn">Create an Account</button>
+                {/* <button className="btn">Create an Account</button> */}
             </section>
 
             <footer className="footer">
-                <p>Copyright @jettradefx 2023. All rights reserved.</p>
+                <p>@jettradefx 2023. All rights reserved.</p>
             </footer>
         </div>
     );

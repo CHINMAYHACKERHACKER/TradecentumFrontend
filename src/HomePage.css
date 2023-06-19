@@ -28,6 +28,11 @@
     cursor: pointer;
 }
 
+.bt:hover {
+    background-color: #fff;
+    color: #ff6f00;
+}
+
 .features-section {
     display: flex;
     justify-content: space-around;
@@ -71,22 +76,6 @@
     padding: 1rem;
 }
 
-
-.button-group {
-    display: flex;
-}
-
-.button-gap {
-    flex-grow: 0;
-    margin-right: 10px;
-    /* Adjust the margin value to create the desired gap */
-}
-
-.bt:hover {
-    background-color: #fff;
-    color: #ff6f00;
-}
-
 /* Adjustments for mobile view */
 @media (max-width: 767px) {
     .features-section {
@@ -104,76 +93,24 @@
         width: 100%;
         margin: 1rem 0;
     }
-
-    .bt:hover {
-        background-color: #ff6f00;
-        color: #fff;
-    }
 }
 
+/* Adjustments for Android */
+@media only screen and (max-width: 600px) {
+    .hero-section h1 {
+        font-size: 2.5rem;
+    }
 
-/* Adjustments for mobile view */
-@media (max-width: 767px) {
-    .features-section {
-        flex-direction: column;
-        align-items: center;
+    .hero-section p {
+        font-size: 1.2rem;
     }
 
     .feature {
-        width: 90%;
-        margin-bottom: 2rem;
-        text-align: center;
-    }
-
-    .button-group {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .button-gap {
-        margin-bottom: 10px;
-    }
-
-    .bt {
         width: 100%;
-        margin: 1rem 0;
+        margin-bottom: 2rem;
     }
 
-    .bt:hover {
-        background-color: #fff;
-        color: #ff6f00;
-    }
-}
-
-
-/* Adjustments for desktop view */
-@media (min-width: 768px) {
-    .features-section {
-        flex-wrap: nowrap;
-        justify-content: space-around;
-    }
-
-    .feature {
-        width: 30%;
-        margin-bottom: 0;
-    }
-
-    .button-group {
-        flex-direction: row;
-    }
-
-    .button-gap {
-        margin-bottom: 0;
-    }
-
-    .bt {
-        width: auto;
-        margin: 0;
-    }
-
-    .bt:hover {
-        background-color: #fff;
-        color: #ff6f00;
+    .cta-section h2 {
+        font-size: 2rem;
     }
 }
