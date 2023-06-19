@@ -118,7 +118,7 @@ const FORGOTPASSWORD = () => {
                             }}
                         >
                             Submit
-                        </button> <Link to="/register" style={{ marginLeft: "55%" }}>Login</Link>
+                        </button> <Link to="/login" style={{ marginLeft: "55%" }}>Login</Link>
                     </form>
                 </div>
             </div>
