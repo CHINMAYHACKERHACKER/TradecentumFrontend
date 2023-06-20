@@ -40,16 +40,16 @@ const HOME = () => {
                 {userData.map((value, i) => {
                     if (value.USERGENERATEUNIQUEID === userUniqueId) {
                         return (
-                            <h1 style={{ fontSize: "2rem" ,marginLeft: "30%"}}>Welcome, {value.USERNAME}</h1>
+                            <h1 className="header-title">Welcome, {value.USERNAME}</h1>
                         );
                     }
                 })}
                 <div>
-                <button className="logout-button" style={{marginLeft: "200%"}} onClick={logoutFunction}>Logout</button>
+                    <button className="logout-button" onClick={logoutFunction}>Logout</button>
                 </div>
                 {!ISPAIDUSER ? (
                     <>
-                        <button type="button" className="logout-button" style={{color: "blue"}}>
+                        <button type="button" className="upgrade-button">
                             Upgrade
                         </button>
                     </>
@@ -80,33 +80,13 @@ const HOME = () => {
                 </aside>
                 <section className="dashboard-section">
                     {/* Dashboard items */}
-                    {/* <div className="dashboard-item">
-                        <h2>Balance</h2>
-                        <p>$10,000</p>
-                    </div>
-                    <div className="dashboard-item">
-                        <h2>Positions</h2>
-                        <p>5</p>
-                    </div>
-                    <div className="dashboard-item">
-                        <h2>Orders</h2>
-                        <p>10</p>
-                    </div> */}
                 </section>
-                {/* <section className="trading-section">
-                    <Card>
-                        <Card.Body>
-                            <h2>Trading Content</h2>
-                            <p>Some content here</p>
-                        </Card.Body>
-                    </Card>
-                </section> */}
                 <div className="toggle-dashboard-button" onClick={toggleDashboard}>
                     <i className={`fas fa-${showDashboard ? 'chevron-left' : 'chevron-right'}`}></i>
                 </div>
             </section>
             <footer className="footer">
-                <p>Copyright @jettradefx 2023. All rights reserved.</p>
+                <p>&copy; 2023 jettradefx. All rights reserved.</p>
             </footer>
         </div>
     );

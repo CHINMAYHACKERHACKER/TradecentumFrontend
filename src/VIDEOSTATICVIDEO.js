@@ -20,12 +20,9 @@ const VIDEOSTATICVIDEO = () => {
     const VIDEOFUNCTION = (
         ID,
         VIDEOONE,
-        VIDEOTWO,
-        VIDEOTHREE,
-        VIDEOFIVE,
         TITLE
     ) => {
-            navigate(`/video/${VIDEOONE}/${VIDEOTWO}/${VIDEOTHREE}/${VIDEOFIVE}/${TITLE}/${ID}`);
+            navigate(`/video/${VIDEOONE}/${TITLE}/${ID}`);
         window.scrollTo(0, 0);
     };
 
@@ -94,7 +91,7 @@ const VIDEOSTATICVIDEO = () => {
                                     position: "relative",
                                     boxShadow: "0px 0px 20px rgba(0, 0, 0, 0.3)",
                                 }}
-                            >
+                            ><br/>
                                 <video
                                     src={`${process.env.REACT_APP_BACKEND_URL}/${value.VIDEOONE}`}
                                     type="video/mp4"
@@ -106,9 +103,6 @@ const VIDEOSTATICVIDEO = () => {
                                         VIDEOFUNCTION(
                                             value.id,
                                             value.VIDEOONE,
-                                            value.VIDEOTWO,
-                                            value.VIDEOTHREE,
-                                            value.VIDEOFIVE,
                                             value.TITLE
                                         )
                                     }

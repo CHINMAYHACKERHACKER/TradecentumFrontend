@@ -91,6 +91,9 @@ const VIDEO = () => {
             </nav>
             <br />
             <br />
+            <br/>
+            <br/>
+            <br/>
             <div className="VIDEO-container">
                 <video
                     ref={videoRef}

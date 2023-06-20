@@ -1,10 +1,14 @@
-/* ADMINPAGE.css */
+/* TraderDashboard.css */
 
-.user-trading-homepage {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
+/* General styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
 }
+
+/* Header styles */
 
 .header {
     display: flex;
@@ -14,10 +18,9 @@
     background-color: #f2f2f2;
 }
 
-.navigation ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
+.header-title {
+    font-size: 2rem;
+    margin-left: 30%;
 }
 
 .logout-button {
@@ -28,16 +31,28 @@
     cursor: pointer;
 }
 
+.upgrade-button {
+    padding: 0.5rem 1rem;
+    background-color: blue;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Main section styles */
+
 .main-section {
     flex: 1;
     display: flex;
+    position: relative;
 }
 
 .left-dashboard {
     width: 250px;
     background-color: #f9f9f9;
-    /* Updated background color */
     transition: width 0.3s ease;
+    overflow-y: auto;
 }
 
 .show {
@@ -50,23 +65,20 @@
 }
 
 .dashboard-links li {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
 }
 
 .dashboard-links a {
     display: block;
     padding: 0.5rem;
     color: #555;
-    /* Updated link color */
     text-decoration: none;
     transition: background-color 0.3s ease;
 }
 
 .dashboard-links a:hover {
     background-color: yellow;
-    /* Updated hover background color */
     color: #333;
-    /* Updated hover link color */
 }
 
 .dashboard-section {
@@ -85,8 +97,30 @@
     cursor: pointer;
 }
 
+/* Footer styles */
+
 .footer {
-    padding: 1rem;
+    padding: 5rem;
     background-color: #f2f2f2;
     text-align: center;
+}
+
+/* Responsive styles */
+
+@media (max-width: 768px) {
+    .header-title {
+        font-size: 1.5rem;
+        margin-left: 15%;
+    }
+}
+
+@media (max-width: 576px) {
+    .header-title {
+        font-size: 1.2rem;
+        margin-left: 5%;
+    }
+
+    .left-dashboard.show {
+        width: 60px;
+    }
 }

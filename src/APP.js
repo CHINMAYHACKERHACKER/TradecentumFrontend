@@ -39,7 +39,7 @@ const APP = () => {
                 <Route path="/EconomicCalendar" element={<EconomicCalendar />} />
                 <Route path="/CROSSRATE" element={<CROSSRATE />} />
                 <Route path="/videostaticvideo" element={<VIDEOSTATICVIDEO />} />
-                <Route path="/video/VIDEO/:VIDEOONE/VIDEO/:VIDEOTWO/VIDEO/:VIDEOTHREE/VIDEO/:VIDEOFIVE/:TITLE/:ID" element={<VIDEO />} />
+                <Route path="/video/VIDEO/:VIDEOONE/:TITLE/:ID" element={<VIDEO />} />
                 <Route path="/trade" element={<TRADE />} />
                 <Route path="/User" element={<USERCARD />} />
                 <Route path="/login" element={<LOGIN />} />
